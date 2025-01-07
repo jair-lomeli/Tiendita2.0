@@ -1,0 +1,27 @@
+{
+  "name": "Stock",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "In": {
+      "type": "number",
+      "required": true
+    },
+    "Out": {
+      "type": "number",
+      "required": true
+    },
+    "Net": {
+      "type": "number",
+      "required": true,
+      "default": 0
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

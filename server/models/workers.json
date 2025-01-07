@@ -1,0 +1,41 @@
+{
+  "name": "Workers",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "Deparment": {
+      "type": "string",
+      "required": true
+    },
+    "idUsername": {
+      "type": "string",
+      "required": true
+    },
+    "idPassword": {
+      "type": "string",
+      "required": true
+    },
+    "idEmail": {
+      "type": "string",
+      "required": true
+    },
+    "idFirstname": {
+      "type": "string",
+      "required": true
+    },
+    "idLastname": {
+      "type": "string"
+    },
+    "idCellphone": {
+      "type": "number",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

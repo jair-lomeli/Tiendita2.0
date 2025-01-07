@@ -1,0 +1,26 @@
+{
+  "name": "Items",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "idName": {
+      "type": "string",
+      "required": true
+    },
+    "idBarcode": {
+      "type": "number",
+      "required": true
+    },
+    "idPrice": {
+      "type": "number",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

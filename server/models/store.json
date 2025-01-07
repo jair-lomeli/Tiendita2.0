@@ -1,0 +1,22 @@
+{
+  "name": "Store",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "idAddress": {
+      "type": "string",
+      "required": true
+    },
+    "idCellphone": {
+      "type": "number",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}
