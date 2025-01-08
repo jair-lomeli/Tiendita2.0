@@ -6,15 +6,19 @@
     "validateUpsert": true
   },
   "properties": {
-    "idName": {
+    "id": {
       "type": "string",
       "required": true
     },
-    "idBarcode": {
+    "Name": {
+      "type": "string",
+      "required": true
+    },
+    "Barcode": {
       "type": "number",
       "required": true
     },
-    "idPrice": {
+    "Price": {
       "type": "number",
       "required": true
     }

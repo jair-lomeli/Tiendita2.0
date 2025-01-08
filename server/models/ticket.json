@@ -6,7 +6,11 @@
     "validateUpsert": true
   },
   "properties": {
-    "idFolioNumber": {
+    "id": {
+      "type": "string",
+      "required": true
+    },
+    "FolioNumber": {
       "type": "number",
       "required": true
     }

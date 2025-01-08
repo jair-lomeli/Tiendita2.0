@@ -6,28 +6,32 @@
     "validateUpsert": true
   },
   "properties": {
-    "idUsername": {
+    "id": {
       "type": "string",
       "required": true
     },
-    "idPassword": {
+    "Username": {
       "type": "string",
       "required": true
     },
-    "idEmail": {
+    "Password": {
       "type": "string",
       "required": true
     },
-    "idFirstname": {
+    "Email": {
       "type": "string",
       "required": true
     },
-    "idLastname": {
+    "Firstname": {
       "type": "string",
       "required": true
     },
-    "idCellphone": {
+    "Lastname": {
       "type": "string",
+      "required": true
+    },
+    "Cellphone": {
+      "type": "number",
       "required": true
     }
   },

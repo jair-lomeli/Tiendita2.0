@@ -6,6 +6,10 @@
     "validateUpsert": true
   },
   "properties": {
+    "id": {
+      "type": "string",
+      "required": true
+    },
     "In": {
       "type": "number",
       "required": true

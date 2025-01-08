@@ -6,31 +6,24 @@
     "validateUpsert": true
   },
   "properties": {
+    "id": {
+      "type": "string",
+      "required": true
+    },
     "Deparment": {
       "type": "string",
       "required": true
     },
-    "idUsername": {
+    "Shift": {
       "type": "string",
       "required": true
     },
-    "idPassword": {
+    "Firstname": {
       "type": "string",
       "required": true
     },
-    "idEmail": {
+    "Lastname": {
       "type": "string",
-      "required": true
-    },
-    "idFirstname": {
-      "type": "string",
-      "required": true
-    },
-    "idLastname": {
-      "type": "string"
-    },
-    "idCellphone": {
-      "type": "number",
       "required": true
     }
   },
