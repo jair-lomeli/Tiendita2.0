@@ -14,35 +14,35 @@
     ]
   },
   "Users": {
-    "dataSource": null,
+    "dataSource": "mysqlDev",
     "public": true
   },
   "role": {
-    "dataSource": null,
+    "dataSource": "mysqlDev",
     "public": true
   },
   "Store": {
-    "dataSource": null,
+    "dataSource": "mysqlDev",
     "public": true
   },
   "Stock": {
-    "dataSource": null,
+    "dataSource": "mysqlDev",
     "public": true
   },
   "Workers": {
-    "dataSource": null,
+    "dataSource": "mysqlDev",
     "public": true
   },
   "Items": {
-    "dataSource": null,
+    "dataSource": "mysqlDev",
     "public": true
   },
   "Ticket": {
-    "dataSource": null,
+    "dataSource": "mysqlDev",
     "public": true
   },
   "Category": {
-    "dataSource": null,
+    "dataSource": "mysqlDev",
     "public": true
   }
 }

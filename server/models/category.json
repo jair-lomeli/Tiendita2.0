@@ -16,7 +16,16 @@
     }
   },
   "validations": [],
-  "relations": {},
+  "relations": {
+    "Items":{
+      "type":"belongsTo",
+      "model":"Items",
+      "foeringKey":"ItemId",
+      "options":{
+        "nestRemoting": true
+    }
+  }
+  },
   "acls": [],
   "methods": {}
 }

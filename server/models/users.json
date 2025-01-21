@@ -36,7 +36,46 @@
     }
   },
   "validations": [],
-  "relations": {},
+  "relations": {
+    "role":{
+      "type":"belongsTo",
+      "model":"role",
+      "foeringKey":"roleId",
+      "options":{
+        "nestRemoting": true
+      }
+    },
+    "Store":{
+      "type":"hasMany",
+      "model":"Store",
+      "foeringKey":"UserId",
+      "options":{
+        "nestRemoting": true
+    }
+  }
+},
   "acls": [],
-  "methods": {}
+  "methods": {
+    "GetoneUsers":{
+      "accepts":[
+        
+      ],
+      "returns":[
+        {
+          "arg":"User",
+          "type":"any",
+          "root": true,
+          "description":"usuario"
+        }
+      ],
+      "description":"sirve para obtener un usuario",
+      "http":[
+        {
+          "path":"/GetoneUsers",
+          "verb":"get"
+        }
+      ]
+
+    }
+  }
 }

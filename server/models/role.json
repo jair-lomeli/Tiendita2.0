@@ -16,7 +16,16 @@
     }
   },
   "validations": [],
-  "relations": {},
+  "relations": {
+    "Users":{
+      "type":"hasMany",
+      "model":"Users",
+      "foeringKey":"roleId",
+      "options":{
+        "nestRemoting": true
+    }
+  }
+},
   "acls": [],
   "methods": {}
 }

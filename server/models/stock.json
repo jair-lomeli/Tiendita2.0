@@ -25,7 +25,24 @@
     }
   },
   "validations": [],
-  "relations": {},
+  "relations": {
+    "Store":{
+      "type":"belongsTo",
+      "model":"Store",
+      "foeringKey":"StoreId",
+      "options":{
+        "nestRemoting": true
+    }
+  },
+  "Items":{
+      "type":"hasMany",
+      "model":"Items",
+      "foeringKey":"StockId",
+      "options":{
+        "nestRemoting": true
+    }
+  }
+  },
   "acls": [],
   "methods": {}
 }

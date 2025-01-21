@@ -20,7 +20,40 @@
     }
   },
   "validations": [],
-  "relations": {},
+  "relations": {
+    "Users":{
+      "type":"belongsTo",
+      "model":"Users",
+      "foeringKey":"UserId",
+      "options":{
+        "nestRemoting": true
+    }
+  },
+    "Workers":{
+      "type":"hasMany",
+      "model":"Workers",
+      "foeringKey":"StoreId",
+      "options":{
+        "nestRemoting": true
+    }
+  },
+    "Ticket":{
+      "type":"hasMany",
+      "model":"Ticket",
+      "foeringKey":"StoreId",
+      "options":{
+        "nestRemoting": true
+    }
+  },
+    "Stock":{
+      "type":"hasMany",
+      "model":"Stock",
+      "foeringKey":"StoreId",
+      "options":{
+        "nestRemoting": true
+    }
+  }
+},
   "acls": [],
   "methods": {}
 }
