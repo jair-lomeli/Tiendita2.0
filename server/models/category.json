@@ -20,7 +20,7 @@
     "Items":{
       "type":"belongsTo",
       "model":"Items",
-      "foeringKey":"ItemId",
+      "foreignKey":"ItemId",
       "options":{
         "nestRemoting": true
     }

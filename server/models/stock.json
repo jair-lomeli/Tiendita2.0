@@ -29,7 +29,7 @@
     "Store":{
       "type":"belongsTo",
       "model":"Store",
-      "foeringKey":"StoreId",
+      "foreignKey":"StoreId",
       "options":{
         "nestRemoting": true
     }
@@ -37,7 +37,7 @@
   "Items":{
       "type":"hasMany",
       "model":"Items",
-      "foeringKey":"StockId",
+      "foreignKey":"StockId",
       "options":{
         "nestRemoting": true
     }

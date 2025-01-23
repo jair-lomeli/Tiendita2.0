@@ -1,18 +1,13 @@
-// Copyright IBM Corp. 2016,2019. All Rights Reserved.
-// Node module: loopback-workspace
-// This file is licensed under the MIT License.
-// License text available at https://opensource.org/licenses/MIT
-
 'use strict';
 
 const loopback = require('loopback');
 const boot = require('loopback-boot');
 
-const app = module.exports = loopback();
+const app = (module.exports = loopback());
 
-app.start = function() {
-  // start the web server
-  return app.listen(function() {
+app.start = function () {
+  // Start the web server
+  return app.listen(function () {
     app.emit('started');
     const baseUrl = app.get('url').replace(/\/$/, '');
     console.log('Web server listening at: %s', baseUrl);
@@ -23,12 +18,34 @@ app.start = function() {
   });
 };
 
-// Bootstrap the application, configure models, datasources and middleware.
-// Sub-apps like REST API are mounted via boot scripts.
-boot(app, __dirname, function(err) {
-  if (err) throw err;
+// Bootstrap the application, configure models, datasources, and middleware
+boot(app, __dirname, function (err) {
+  if (err) {
+    console.error('Error during boot:', err);
+    throw err;
+  }
 
-  // start the server if `$ node server.js`
-  if (require.main === module)
+  // Start the server if `$ node server.js`
+  if (require.main === module) {
     app.start();
+
+    // Ensure autoupdate only executes once
+    const ds = app.datasources.mysqlDev;
+    if (ds.connected) {
+      runAutoupdate(ds);
+    } else {
+      ds.once('connected', () => runAutoupdate(ds));
+    }
+  }
 });
+
+// Function to handle autoupdate
+function runAutoupdate(ds) {
+  ds.autoupdate(function (err) {
+    if (err) {
+      console.error('Error during autoupdate:', err);
+      return;
+    }
+    console.log('Tablas actualizadas o creadas exitosamente en la base de datos.');
+  });
+}

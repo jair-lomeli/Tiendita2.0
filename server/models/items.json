@@ -28,7 +28,7 @@
     "Stock":{
       "type":"belongsTo",
       "model":"Stock",
-      "foeringKey":"StockId",
+      "foreignKey":"StockId",
       "options":{
         "nestRemoting": true
     }
@@ -36,7 +36,7 @@
   "Category":{
       "type":"hasMany",
       "model":"Category",
-      "foeringKey":"ItemId",
+      "foreignKey":"ItemId",
       "options":{
         "nestRemoting": true
     }

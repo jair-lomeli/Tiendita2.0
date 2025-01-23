@@ -20,7 +20,7 @@
     "Users":{
       "type":"hasMany",
       "model":"Users",
-      "foeringKey":"roleId",
+      "foreignKey":"roleId",
       "options":{
         "nestRemoting": true
     }

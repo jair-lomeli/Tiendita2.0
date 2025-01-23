@@ -32,7 +32,7 @@
     "Store":{
       "type":"belongsTo",
       "model":"Store",
-      "foeringKey":"StoreId",
+      "foreignKey":"StoreId",
       "options":{
         "nestRemoting": true
     }
